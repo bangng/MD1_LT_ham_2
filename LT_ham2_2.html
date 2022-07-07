@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="cS" type="text">
+<input id="cS2" type="text">
+
+<button onclick="tiLe()">Tỉ Lệ</button>
+<p id="result">Kết Quả</p>
+<p id="result2">Kết Quả2</p>
+<script>
+
+  function cVaS(r) {
+    let c = Math.PI  *2* r;
+    let s= Math.PI * r* r;
+
+    let a = [];
+    a.push(c,s,);
+    return a ;
+  }cVaS();
+
+
+
+  function tiLe(){
+    let r1 = +document.getElementById('cS').value;
+    let r2 = +document.getElementById('cS2').value;
+    let s1 = cVaS(r1)[1]
+    let c1 = cVaS(r1)[0]
+    let s2 = cVaS(r2)[1]
+    let c2 = cVaS(r2)[0]
+    let tiLeChuVi = cVaS(r1)[0]/cVaS(r2)[0];
+    let tiLeDienTich = cVaS(r1)[1]/cVaS(r2)[1];
+    document.getElementById("result").innerText ='chu vi 1 là'+c1 +'diệ tích 1 là '+ s1+'chu vi 2 là' +c2+'diện tích 2 là'+ s2
+    document.getElementById("result2").innerText ='tỉ lệ chu vi'+ tiLeChuVi+ 'tỉ lệ diện tích'+ tiLeDienTich
+  }
+</script>
+
+</body>
+</html>
